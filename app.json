@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/register/index",
+    "pages/score/index",
+    "pages/score/result/index",
+    "pages/intro/index",
+    "pages/testcenter/index",
+    "pages/logs/logs",
+    "pages/testcenter/show_info/show_info",
+    "pages/register/register/index",
+    "pages/register/preview/index",
+    "pages/register/submited/index"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/register/index",
+        "text": "报名"
+      },
+      {
+        "pagePath": "pages/score/index",
+        "text": "成绩"
+      },
+      {
+"pagePath": "pages/index/index",
+"text": "介绍"
+      },
+      {
+"pagePath": "pages/testcenter/index",
+"text": "考点"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

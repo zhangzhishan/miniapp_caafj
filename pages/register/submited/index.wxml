@@ -1,0 +1,67 @@
+<view class="container">
+<text>请仔细填写报名信息，确保无误</text>
+<view class="table">
+<view class="tr">
+<view class="td">姓名</view>
+<view class="td">sss</view>
+</view>
+<view class="tr">
+<view class="td">拼音</view>
+<view class="td">sss</view>
+</view>
+<view class="tr">
+<view class="td">身份证</view>
+<view class="td">sss</view>
+</view>
+<view class="tr">
+<view class="td">报考科目</view>
+<view class="td">sss</view>
+</view>
+<view class="tr">
+<view class="td">报考级别</view>
+<view class="td">sss</view>
+</view>
+<view class="tr">
+<view class="td">证书附件</view>
+<radio-group name="radio-group">
+      <label><radio value="radio1"/>radio1</label>
+      <label><radio value="radio2"/>radio2</label>
+    </radio-group></view>
+<view class="tr">
+自动填写（首次报考无效）
+</view>
+<view class="tr">
+<view class="td">性别</view>
+<radio-group name="radio-group">
+      <label><radio value="radio1"/>radio1</label>
+      <label><radio value="radio2"/>radio2</label>
+    </radio-group></view>
+<view class="tr">
+<view class="td">生日</view>
+<view class="td">sss</view>
+</view>
+<view class="tr">
+<view class="td">国籍</view>
+<view class="td">sss</view>
+</view>
+<view class="tr">
+<view class="td">民族</view>
+<view class="td">sss</view>
+</view>
+<view class="tr">
+<view class="td">地址</view>
+<view class="td">sss</view>
+</view>
+<view class="tr">
+<view class="td">电子照片</view>
+<button bindlongtap="pickImage">skdfj</button>
+<view class="td">sss</view>
+</view>
+</view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="btn-area">
+    <!-- <button formType="submit">上一步</button> -->
+    <button formType="reset">返回首页</button>
+  </view>
+    </form>
+</view>

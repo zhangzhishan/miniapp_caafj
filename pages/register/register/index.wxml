@@ -1,0 +1,82 @@
+<view class="container">
+<text>请仔细填写报名信息，确保无误</text>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+
+<view class="table">
+<view class="tr">
+<view class="td">姓名</view>
+  <input type="text" placeholder="" focous = "true" name = "name"/>
+</view>
+<view class="tr">
+<view class="td">拼音</view>
+  <input type="text" placeholder="" name = "pinyin"/>
+</view>
+<view class="tr">
+<view class="td">身份证</view>
+  <input type="idcard" placeholder="" name = "idnumber"/>
+</view>
+<view class="tr">
+<view class="td">报考科目</view>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+
+<view class="tr">
+<view class="td">报考级别</view>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker></view>
+<view class="tr">
+<view class="td">证书附件</view>
+<radio-group name="fj-group">
+      <label><radio value="radio1"/>制作</label>
+      <label><radio value="radio2"/>不制作</label>
+    </radio-group></view>
+<view class="tr">
+  <button bindtap="setDataAuto">自动填写（首次报考无效）</button>
+</view>
+<view class="tr">
+<view class="td">性别</view>
+<radio-group name="sex-group">
+      <label><radio value="radio1"/>男</label>
+      <label><radio value="radio2"/>女</label>
+    </radio-group></view>
+<view class="tr">
+<view class="td">生日</view>
+<picker mode="date" value="{{date}}" start="1990-09-01" end="{{date}}" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker></view>
+<view class="tr">
+<view class="td">国籍</view>
+  <input type="text" placeholder="" name = "national"/>
+</view>
+<view class="tr">
+<view class="td">民族</view>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker></view>
+<view class="tr">
+<view class="td">地址</view>
+  <input type="text" placeholder="" name = "pinyin"/>
+</view>
+<view class="tr">
+<view class="td">电子照片</view>
+<button bindlongtap="pickImage">skdfj</button>
+<view class="td">sss</view>
+</view>
+</view>
+  <view class="btn-area">
+    <button formType="reset">上一步</button>
+    <button formType="submit">下一步</button>
+  </view>
+    </form>
+</view>

@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="container">
+  <view  class="userinfo">
+    <text class="userinfo-nickname">
+    {{kjj.name}}({{kjj.id}})
+    </text>
+  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="btn-area">
+    <button formType="submit">开启</button>
+    <button formType="reset">关闭</button>
+  </view>
+    </form>
+
+  <text>开启状态考生才可输入考点编号后，通过微信报名</text>
+
+<view class="table">
+<view class="tr">
+<view class="td">待考</view>
+<view class="td">sss</view>
+</view>
+<view class="tr">
+<view class="td">核对中</view>
+<view class="td">sss</view>
+</view>
+<view class="tr">
+<view class="td">已核对</view>
+<view class="td">sss</view>
+</view>
+<view class="tr">
+<view class="td">评卷中</view>
+<view class="td">sss</view>
+</view>
+<view class="tr">
+<view class="td">成绩公布</view>
+<view class="td">sss</view>
+</view>
+<view class="tr">
+<view class="td">总人数</view>
+<view class="td">sss</view>
+</view>
+</view>
+
+</view>

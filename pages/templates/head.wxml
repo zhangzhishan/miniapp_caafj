@@ -1,0 +1,5 @@
+<template name="head">
+  <view>
+    <image style="width: 200px; height: 200px; background-color: #eeeeee;"  src="../../image/u4.jpg"></image>
+  </view>
+</template>
