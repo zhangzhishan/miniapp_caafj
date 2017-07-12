@@ -7,11 +7,16 @@ App({
     wx.setStorageSync('logs', logs)
   },
     showError:function(message) {
-    wx.showToast({
-  title: message,
-  icon: 'loading',
-  duration: 2000
+      wx.showModal({
+  title: '提示',
+  content: message,
+  showCancel: false,
 })
+//     wx.showToast({
+//   title: message,
+//   icon: 'loading',
+//   duration: 2000
+// })
   },
   getUserInfo:function(cb){
     var that = this
@@ -32,6 +37,8 @@ App({
     }
   },
   globalData:{
-    userInfo:null
+    userInfo: null,
+    baseurl: 'http://localhost/api/'
+    // baseurl: 'https://test.caafj.com/api/'
   }
 })

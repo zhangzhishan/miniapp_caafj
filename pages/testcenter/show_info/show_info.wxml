@@ -1,44 +1,64 @@
 <!--index.wxml-->
 <view class="container">
-  <view  class="userinfo">
-    <text class="userinfo-nickname">
-    {{kjj.name}}({{kjj.id}})
+        <view class="btn-area">
+            <button bindtap="openWechat" type="{{on_type}}">
+                开启
+            </button>
+            <button bindtap="closeWechat" type="{{off_type}}">
+                关闭
+            </button>
+        </view>
+    <text>
+        开启状态考生才可输入考点编号后，通过微信报名
     </text>
-  </view>
-  <form bindsubmit="formSubmit" bindreset="formReset">
-  <view class="btn-area">
-    <button formType="submit">开启</button>
-    <button formType="reset">关闭</button>
-  </view>
-    </form>
-
-  <text>开启状态考生才可输入考点编号后，通过微信报名</text>
-
-<view class="table">
-<view class="tr">
-<view class="td">待考</view>
-<view class="td">sss</view>
-</view>
-<view class="tr">
-<view class="td">核对中</view>
-<view class="td">sss</view>
-</view>
-<view class="tr">
-<view class="td">已核对</view>
-<view class="td">sss</view>
-</view>
-<view class="tr">
-<view class="td">评卷中</view>
-<view class="td">sss</view>
-</view>
-<view class="tr">
-<view class="td">成绩公布</view>
-<view class="td">sss</view>
-</view>
-<view class="tr">
-<view class="td">总人数</view>
-<view class="td">sss</view>
-</view>
-</view>
-
+    <view class="table">
+        <view class="tr">
+            <view class="td">
+                待考
+            </view>
+            <view class="td">
+                {{waiting_exam}}
+            </view>
+        </view>
+        <view class="tr">
+            <view class="td">
+                核对中
+            </view>
+            <view class="td">
+                {{on_checking}}
+            </view>
+        </view>
+        <view class="tr">
+            <view class="td">
+                已核对
+            </view>
+            <view class="td">
+                {{checked}}
+            </view>
+        </view>
+        <view class="tr">
+            <view class="td">
+                评卷中
+            </view>
+            <view class="td">
+                {{on_score}}
+            </view>
+        </view>
+        <view class="tr">
+            <view class="td">
+                成绩公布
+            </view>
+            <view class="td">
+                {{scored}}
+            </view>
+        </view>
+        <view class="tr">
+            <view class="td">
+                总人数
+            </view>
+            <view class="td">
+                {{all_sum}}
+            </view>
+        </view>
+    </view>
 </view>

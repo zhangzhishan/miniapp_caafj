@@ -2,10 +2,10 @@
   <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" 
     class="list" bindscrolltolower="bindDownLoad" bindscroll="scroll" bindscrolltoupper="refresh">
     <view class="item" wx:for="{{list}}">
-      <image class="img" src="{{item.pic_url}}"></image>
+      <image class="img" src="{{img_url}}{{item.img1}}"></image>
       <view class="text">
-        <text class="title">{{item.name}}</text>
-        <text class="description">{{item.short_description}}</text>
+        <text class="title">{{item.title}}</text>
+        <!-- <text class="description">{{item.text}}</text> -->
       </view>
     </view>
   </scroll-view>

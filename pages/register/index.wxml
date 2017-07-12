@@ -1,21 +1,28 @@
 <!--index.wxml-->
-<import src="../templates/head.wxml" />
-
-<template is="head"/>
-
+<import src="../templates/head.wxml">
+</import>
+<template is="head">
+</template>
 <view class="container">
-  <form bindsubmit="formSubmit" bindreset="formReset">
-<view class="section">
-    <text class="user-name">请输入编号：</text>
-  <input type="number" placeholder="编号" focous = "true" name = "kjjbm"/>
-</view>
-<view class="btn-area">
-    <button formType="submit">开始报名</button>
-  </view>
-  <view class="userinfo">
-    <text class="">编号请咨询考生所属考级点。\n</text>
-    <text>非承办点考生，请与就近考级点联系。</text>
-  </view>
-  
-  </form>
+    <form bindreset="formReset" bindsubmit="formSubmit">
+        <view class="section">
+            <text class="user-name">
+                请输入编号：
+            </text>
+            <input focous="true" name="kjjbm" placeholder="编号" type="number"/>
+        </view>
+        <view class="btn-area">
+            <button formType="submit">
+                开始报名
+            </button>
+        </view>
+        <view class="userinfo">
+            <text class="">
+                编号请咨询考生所属考级点。\n
+            </text>
+            <text>
+                非承办点考生，请与就近考级点联系。
+            </text>
+        </view>
+    </form>
 </view>

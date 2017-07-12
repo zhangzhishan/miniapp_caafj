@@ -1,31 +1,55 @@
 <!--index.wxml-->
 <view class="container">
-  <form bindsubmit="formSubmit" bindreset="formReset">
+    <form bindreset="formReset" bindsubmit="formSubmit">
+        <view>
+            <text>
+                姓名
+            </text>
+            <input name = "name" type="text" placeholder="" />
+        </view>
+<!--         <view class="td">生日</view>
+<picker mode="date" value="{{date}}" start="1990-09-01" end="{{date}}" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker> -->
+        <view>
+            <!-- <text> -->
+                <!-- 生日 -->
+            <!-- </text> -->
+            <picker name = "dob" bindchange="bindDateChange" end="2020-09-01" mode="date" start="1900-09-01" value="{{dob}}">
+                <view class="picker">
+       出生日期：{{dob}}
+    </view>
+            </picker>
+        </view>
+        <view>
+            <text>
+                性别
+            </text>
+            <radio-group class="radio-group" bindchange="radioChange" name = "sex">
 
-  <view>
-    <text>姓名</text>
-    <input />
-  </view>
-  <view>
-    <text>生日</text>
-<picker mode="date" value="1994-01-08" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-  </picker>
-</view>
-<view>
-    <text>性别</text>
-    <radio value="1" checked="true"/>男
-        <radio value="0" checked=""/>女
-
-  </view>
-<view>
-  <text>或只输入身份证号</text>
-  <text>身份证</text>
-  <input type="idcard" placeholder="身份证输入键盘" />
-
-</view>
-<view>
-      <button formType="submit">Submit</button>
-
-</view>
-</form>
+            <radio checked="true" value="0" />
+            <!-- </radio> -->
+            男
+            <radio checked="" value="1" />
+            <!-- </radio> -->
+            女
+            </radio-group>
+        </view>
+        <view>
+            <text>
+                或只输入身份证号
+            </text>
+            <text>
+                身份证
+            </text>
+            <input placeholder="身份证输入键盘" type="idcard" name = "idnumber"/>
+        </view>
+        <view>
+            <button formType="submit">
+                Submit
+            </button>
+        </view>
+    </form>
 </view>

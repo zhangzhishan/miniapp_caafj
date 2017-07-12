@@ -5,10 +5,18 @@
 </view>
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
  <swiper-item>
-  <view>Seside1</view>
+  <!-- <view></view> -->
+  <view wx:for="{{exam_ing}}">
+  {{item.bm_name}} {{item.bm_zy}} {{item.bm_level}} {{item.bm_time}}
+</view>
  </swiper-item>
 
  <swiper-item>
-  <view>Seside3</view>
+  <!-- <view></view> -->
+    <view wx:for="{{exam_done}}">
+  {{item.bm_name}} {{item.bm_zy}} {{item.pass_level}} {{item.bm_time}}
+</view>
+  <!-- <view data-text="{{item.text}}" class="static_cell" bindtap="{{item.func}}">{{item.text}}</view> -->
+
  </swiper-item>
 </swiper>

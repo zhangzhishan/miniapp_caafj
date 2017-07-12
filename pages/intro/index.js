@@ -1,4 +1,8 @@
 // pages/intro/index.js
+var app = getApp()
+
+var url = app.globalData.baseurl + ''
+
 Page({
 
   /**
