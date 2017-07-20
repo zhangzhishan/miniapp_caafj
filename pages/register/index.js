@@ -18,10 +18,10 @@ Page({
     formSubmit: function(e) {
         // 向服务器发送编号，并根据返回结果展示不同的值
         if (e.detail.value.kjjbm.length == 0) {
-            // app.showError('请输入编号！')
-            wx.navigateTo({
-                url: './register/index?bm_bm=057868',
-            })
+            app.showError('请输入编号！')
+            // wx.navigateTo({
+                // url: './register/index?bm_bm=057868',
+            // })
         }
         else {
             // console.log(e.detail.value)
@@ -64,7 +64,7 @@ Page({
     },
     onShareAppMessage: function() {
         return {
-            title: '自定义转发标题',
+            title: '福建美术考级中心考试报名',
             path: '/pages/register/index',
             success: function(res) {
                 // 转发成功

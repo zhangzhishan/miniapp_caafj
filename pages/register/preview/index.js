@@ -5,7 +5,24 @@ Page({
     /**
      * 页面的初始数据
      */
-    data: {},
+    data: {
+        name: "",
+            idnumber: "",
+            dob: "",
+            pinyin: "",
+            fj: "",
+            sex: "",
+            nationality: "",
+            address: "",
+            bm_bm: "",
+            subject_index: "",
+            subjects: "",
+            levels: "",
+            nations: "",
+            src: "",
+            level_index: "",
+            nation_index: "",
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -33,8 +50,14 @@ Page({
         })
     },
     formSubmit: function() {
+        // var that = this
         var info = wx.getStorageSync('data')
-        console.log(info)
+        // console.log(that)
+        // console.log(that.levels)
+        // console.log(that.levels[that.level_index])
+        // console.log(info.levels[info.level_index])
+        // console.log(info)
+        // return;
         wx.request({
             url: url,
             method: "POST",
@@ -48,15 +71,19 @@ Page({
                 bm_mail: info.nationality, //国籍
                 bm_add: info.address,
                 bm_zy: info.subjects[info.subject_index],
-                bm_level: info.level_index + 1,
+                bm_level: info.levels[info.level_index],
                 bm_fj: info.fj, // 1 制作 0 不制作
                 IDnumber: info.idnumber, // 身份证号码
             },
             success: function(res) {
-                console.log(res)
+                // console.log(res)
+
                 wx.navigateTo({
-                    url: '../submited/index?exam_number=' + res.data,
+                    url: '../submited/index?exam_number=' + res.data.data,
                 })
+            },
+            complete: function() {
+                console.log(info.levels[info.level_index])
             }
         });
     },

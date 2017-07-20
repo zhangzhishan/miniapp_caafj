@@ -16,7 +16,7 @@ Page({
         idnumber: "",
         dob: "",
         pinyin: "",
-        level_index: "",
+        level_index: 0,
         subject_index: "",
         nation_index: "",
         fj: "",
@@ -73,9 +73,9 @@ Page({
     //     })
     // },
     bindLevelPickerChange: function(e) {
-        // console.log('picker发送选择改变，携带值为', e.detail.value)
+        console.log('levelpicker发送选择改变，携带值为', e.detail.value)
         this.setData({
-            level_index: e.detail.value
+            level_index: e.detail.value - "0"
         })
     },
     bindSubjectPickerChange: function(e) {
@@ -122,7 +122,7 @@ Page({
                             female_checked = true
                         }
                         that.setData({
-                            src: info.image,
+                            src: app.globalData.id_srcurl + info.image,
                             dob: info.bm_csdate,
                             nation_index: that.data.nations.indexOf(info.bm_mz),
                             nationality: info.bm_mail,
@@ -141,7 +141,7 @@ Page({
         var that = this
         // console.log(that.data)
         if (that.data.idnumber.length == 0 || that.data.name.length == 0) {
-            // app.showError("请输入姓名和身份证号码！")
+            app.showError("请输入姓名和身份证号码！")
         }
         wx.chooseImage({
             count: 1, // 默认9
@@ -219,9 +219,11 @@ function upload(page, path) {
             title: "正在上传"
         }),
         wx.uploadFile({
-            url: 'http://localhost/api/register/upload',
+            url: app.globalData.baseurl + 'register/upload',
+                        // url: 'http://localhost/api/register/upload',
+
             filePath: path[0],
-            name: 'pics',
+            name: 'file',
             method: "POST",
             header: {
                 "Content-Type": "multipart/form-data"
@@ -241,10 +243,15 @@ function upload(page, path) {
                     })
                     return;
                 }
-                var data = res.data
-                page.setData({ //上传成功修改显示头像
-                    src: path[0]
-                })
+                wx.showModal({
+                        title: '提示',
+                        content: '上传成功',
+                        showCancel: false
+                    })
+                // var data = res.data
+                // page.setData({ //上传成功修改显示头像
+                //     src: path[0]
+                // })
             },
             fail: function(e) {
                 console.log(e);

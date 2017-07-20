@@ -44,7 +44,7 @@
             <text>
                 身份证
             </text>
-            <input placeholder="身份证输入键盘" type="idcard" name = "idnumber"/>
+            <input placeholder="身份证输入键盘" type="text" name = "idnumber"/>
         </view>
         <view>
             <button formType="submit">

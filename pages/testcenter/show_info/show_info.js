@@ -122,6 +122,8 @@ Page({
          //                    })
     },
     closeWechat: function() {
+                var that = this
+
         var value = wx.getStorageSync('bm_bm')
         console.log(value)
         wx.request({
