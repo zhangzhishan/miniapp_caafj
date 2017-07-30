@@ -1,16 +1,19 @@
 <!--index.wxml-->
 <view class="container">
-        <view class="btn-area">
-            <button bindtap="openWechat" type="{{on_type}}">
-                开启
-            </button>
-            <button bindtap="closeWechat" type="{{off_type}}">
-                关闭
-            </button>
-        </view>
-    <text>
-        开启状态考生才可输入考点编号后，通过微信报名
-    </text>
+  <form>
+    <view class="btn-area">
+        <button bindtap="openWechat" type="{{on_type}}">
+            开启
+        </button>
+        <button bindtap="closeWechat" type="{{off_type}}">
+            关闭
+        </button>
+    </view>
+    <view style="margin:10px 0 10px 0;">
+      <text>
+          开启状态考生才可输入考点编号后，通过微信报名
+      </text>
+    </view>
     <view class="table">
         <view class="tr">
             <view class="td">
@@ -61,4 +64,5 @@
             </view>
         </view>
     </view>
+  </form>
 </view>

@@ -19,3 +19,21 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.user-name{
+  font-size: 23px;
+  font-weight: bold;
+}
+.section input{
+  height: 40px;
+  border: 1px solid #666;
+  background-color: #aaa;
+  font-size: 20px;
+  margin: 5px 0 20px 0;
+}
+.btn-area button{
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #3399ff;
+}

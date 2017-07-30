@@ -16,7 +16,7 @@ Page({
     },
     backToIndex: function() {
         wx.switchTab({
-            url: '/pages/index/index',
+            url: '/pages/register/index',
         })
     },
     continueRegister: function() {

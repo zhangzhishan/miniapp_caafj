@@ -1,0 +1,44 @@
+<!--pages/description/index.wxml-->
+<view class="container">
+<form>
+  <view class="title">
+    <text>中国美术学院社会美术水平考级</text>
+  </view>
+  <view class="logo">
+    <image mode="widthFix" src="../../image/i1.jpg"></image>
+  </view>
+  <view class="logo">
+    <image mode="widthFix" src="../../image/i2.jpg"></image>
+  </view>
+  <view class="logo">
+    <image mode="widthFix" src="../../image/i3.jpg"></image>
+  </view>
+  <view class="logo">
+    <image mode="widthFix" src="../../image/i4.jpg"></image>
+  </view>
+  <view class="logo">
+    <image mode="widthFix" src="../../image/i5.jpg"></image>
+  </view>
+  <view class="logo">
+    <image mode="widthFix" src="../../image/i6.jpg"></image>
+  </view>
+  <view class="logo" style="margin:0px 0 0 0;">
+    <image  mode="widthFix" src="../../image/i7.jpg"></image>
+  </view>
+  <view class="logo">
+    <image mode="widthFix" src="../../image/i8.jpg"></image>
+  </view>
+  <view class="logo">
+    <image mode="widthFix" src="../../image/i9.jpg"></image>
+  </view>
+  <view class="logo">
+    <image mode="widthFix" src="../../image/i10.jpg"></image>
+  </view>
+  <view class="logo">
+    <image mode="widthFix" src="../../image/i11.jpg"></image>
+  </view>
+  <view class="logo">
+    <image mode="widthFix" src="../../image/i12.jpg"></image>
+  </view>
+</form>
+</view>

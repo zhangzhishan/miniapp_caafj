@@ -1,105 +1,106 @@
 <view class="container">
-    <text>
+<form bindreset="formReset" bindsubmit="formSubmit">
+    <view>
+    <text style="width:100%;font-weight: bold;text-align: center;">
         请仔细填写报名信息，确保无误
     </text>
-    <view class="table">
-        <view class="tr">
-            <view class="td">
-                姓名
-            </view>
-            <view class="td">
-                {{name}}
-            </view>
-        </view>
-        <view class="tr">
-            <view class="td">
-                拼音
-            </view>
-            <view class="td">
-                {{pinyin}}
-            </view>
-        </view>
-        <view class="tr">
-            <view class="td">
-                身份证
-            </view>
-            <view class="td">
-                {{idnumber}}
-            </view>
-        </view>
-        <view class="tr">
-            <view class="td">
-                报考科目
-            </view>
-            <view class="td">
-                {{subjects[subject_index]}}
-            </view>
-        </view>
-        <view class="tr">
-            <view class="td">
-                报考级别
-            </view>
-            <view class="td">
-                {{levels[level_index]}}
-            </view>
-        </view>
-        <view class="tr">
-            <view class="td">
-                证书附件
-            </view>
-            {{fj}}
-        </view>
+    </view>
+    <view>
+        <text>
+            姓名
+        </text>
+        <text>
+            {{name}}
+        </text>
+    </view>
+    <view>
+        <text>
+            拼音
+        </text>
+        <text>
+            {{pinyin}}
+        </text>
+    </view>
+    <view>
+        <text>
+            身份证
+        </text>
+        <text>
+            {{idnumber}}
+        </text>
+    </view>
+    <view>
+        <text>
+            报考科目
+        </text>
+        <text>
+            {{subjects[subject_index]}}
+        </text>
+    </view>
+    <view>
+        <text>
+            报考级别
+        </text>
+        <text>
+            {{levels[level_index]}}
+        </text>
+    </view>
+    <view>
+        <text>
+            证书附件
+        </text>
+        {{fj}}
+    </view>
 
-        <view class="tr">
-            <view class="td">
-                性别
-            </view>
-            {{sex}}
-        </view>
-        <view class="tr">
-            <view class="td">
-                生日
-            </view>
-            <view class="td">
-                {{dob}}
-            </view>
-        </view>
-        <view class="tr">
-            <view class="td">
-                国籍
-            </view>
-            <view class="td">
-                {{nationality}}
-            </view>
-        </view>
-        <view class="tr">
-            <view class="td">
-                民族
-            </view>
-            <view class="td">
-                {{nations[nation_index]}}
-            </view>
-        </view>
-        <view class="tr">
-            <view class="td">
-                地址
-            </view>
-            <view class="td">
-                {{address}}
-            </view>
-        </view>
-        <view class="tr">
-            <view class="td">
-                电子照片
-            </view>
-            
-            <view class="td">
-                        <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="aspectFit" src="{{src}}" ></image>
-
-            </view>
+    <view>
+        <text>
+            性别
+        </text>
+        {{sex}}
+    </view>
+    <view>
+        <text>
+            生日
+        </text>
+        <view>
+            {{dob}}
         </view>
     </view>
-    <form bindreset="formReset" bindsubmit="formSubmit">
+    <view>
+        <text>
+            国籍
+        </text>
+        <text>
+            {{nationality}}
+        </text>
+    </view>
+    <view>
+        <text>
+            民族
+        </text>
+        <text>
+            {{nations[nation_index]}}
+        </text>
+    </view>
+    <view>
+        <text>
+            地址
+        </text>
+        <text>
+            {{address}}
+        </text>
+    </view>
+    <view>
+        <text style="width:120px;">
+            电子照片
+        </text>
+        
+        <view>
+                    <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="aspectFit" src="{{src}}" ></image>
+
+        </view>
+    </view>
+    
         <view class="btn-area">
             <button formType="submit">
                 确认提交

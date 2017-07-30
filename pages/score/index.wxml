@@ -1,4 +1,8 @@
 <!--index.wxml-->
+<import src="../templates/head.wxml">
+</import>
+<template is="head">
+</template>
 <view class="container">
     <form bindreset="formReset" bindsubmit="formSubmit">
         <view>
@@ -19,7 +23,7 @@
             <!-- </text> -->
             <picker name = "dob" bindchange="bindDateChange" end="2020-09-01" mode="date" start="1900-09-01" value="{{dob}}">
                 <view class="picker">
-       出生日期：{{dob}}
+       <text>出生日期</text> {{dob}}
     </view>
             </picker>
         </view>
@@ -37,18 +41,19 @@
             女
             </radio-group>
         </view>
+        <view class="line-css"></view>
         <view>
-            <text>
+          <text style="width:200px;">
                 或只输入身份证号
-            </text>
-            <text>
-                身份证
-            </text>
-            <input placeholder="身份证输入键盘" type="text" name = "idnumber"/>
+          </text>
         </view>
         <view>
+            
+            <input placeholder="身份证输入键盘" type="text" name = "idnumber" style="height:40px;width:100%;margin-bottom:20px;"/>
+        </view>
+        <view class="btn-area">
             <button formType="submit">
-                Submit
+                查询成绩
             </button>
         </view>
     </form>

@@ -1,15 +1,21 @@
+<!--index.wxml-->
+<view class="logo">
+    <image mode="aspectFit" src="../../../image/u4.jpg"></image>
+  </view>
 <view class="container">
-<text>请仔细填写报名信息，确保无误</text>
-<view class="">
-  <view>报名成功</view>
-  <view>准考证号：{{exam_number}}</view>
+<form>
+  <view>
+    <text style="font-size:40px;font-weight: bold;width:100%;text-align:center;">报名成功</text>
+  </view>
+  <view><text style="margin:20px 0 20px 0;">准考证号：</text> {{exam_number}}</view>
+  <view class="border-css"></view>
+  <view>
+    <text style="width:100%;font-size:18px;text-align: center;">请联系老师缴纳相关费用，获取准考证</text>
+  </view>
 
-
-<view>请联系老师缴纳相关费用，获取准考证</view>
-</view>
   <view class="btn-area">
-        <button bindtap="backToIndex">返回首页</button>
-
+    <button bindtap="backToIndex" style="margin-right:10px;">返回首页</button>
     <button bindtap="continueRegister">继续报名</button>
   </view>
+</form>
 </view>

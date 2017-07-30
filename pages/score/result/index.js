@@ -10,12 +10,45 @@ Page({
         currentTab: 0,
         exam_done: [],
         exam_ing: [],
+        showid: '',
+        tipsshow: 'undis',
+
+    },
+    hideOrDisplay: function (e) {
+        console.log(e);
+      var tipsshow_val = e.currentTarget.dataset.id;
+      if(tipsshow_val == this.data.showid) {
+this.setData({
+          // tipsshow: 'undis',
+          showid: 0,
+        })
+      }
+      else {
+        this.setData({
+          // tipsshow: 'undis',
+          showid: tipsshow_val,
+        })
+      }
+      
+      // if (tipsshow_val != "undis") {
+      //   this.setData({
+      //     tipsshow: 'undis',
+      //     showid: '',
+      //   })
+      // }
+      // else {
+      //   this.setData({
+      //     tipsshow: 'dis',
+      //     showid: '',
+      //   })
+      // }
+
     },
     onLoad: function() {
         var that = this;
         var exam_ing = wx.getStorageSync('exam_info').exam_ing
         console.log(exam_ing)
-                var exam_done = wx.getStorageSync('exam_info').exam_done
+        var exam_done = wx.getStorageSync('exam_info').exam_done
 
         // 获取系统信息
         wx.getSystemInfo({

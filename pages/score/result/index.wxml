@@ -13,9 +13,25 @@
 
  <swiper-item>
   <!-- <view></view> -->
-    <view wx:for="{{exam_done}}">
-  {{item.bm_name}} {{item.bm_zy}} {{item.pass_level}} {{item.bm_time}}
-</view>
+    <view wx:for="{{exam_done}}" bindtap="hideOrDisplay" data-id="{{item.serial}}">
+  	{{item.bm_name}} {{item.bm_zy}} {{item.pass_level}} {{item.bm_time}}
+
+      <view wx:if="{{showid == item.serial}}" class="detail">
+        <view class="row">
+          <text>报考级别</text>
+          <input type="text"  value="{{item.bm_level}}" disabled="true"/>
+        </view>
+        <view class="row">
+          <text>合格成绩</text>
+          <input type="text"  value="{{item.pass_level}}" disabled="true"/>
+        </view>
+        <view class="row">
+          <text>证书号</text>
+          <input type="text"  value="{{item.serial}}" disabled="true"/>
+        </view>
+      </view>
+    </view>
+
   <!-- <view data-text="{{item.text}}" class="static_cell" bindtap="{{item.func}}">{{item.text}}</view> -->
 
  </swiper-item>
