@@ -1,40 +1,48 @@
 <view class="container">
 <form bindsubmit="formSubmit" bindreset="formReset">
-  <view><text style="width:100%;font-weight: bold;text-align: center;">请仔细填写报名信息，确保无误</text></view>
-  <view class="line-css"></view>
+  <view><text style="width:100%;font-size:13pt;font-weight: bold;text-align: center;">请仔细填写报名信息，确保无误</text></view>
+  <view class="border-css"></view>
+    
     <view>
-      <text>姓名</text>
+      <text>姓名（请勿输入空格）<text style="color:red">*</text></text>
+    </view>
+    <view>
       <input type="text" placeholder="" focous = "true" name = "name" bindblur = "setName" value=""/>
     </view>
-  <view class="border-css"></view>
     <view>
-      <text>拼音</text>
+      <text>拼音（例：Wang Fang Yi)</text>
+    </view>
+    <view>
       <input type="text" placeholder="" name = "pinyin" />
     </view>
-  <view class="border-css"></view>
     <view>
-      <text>身份证</text>
+      <text>身份证(非中国籍请输入护照号)</text>
+      </view>
+    <view>
       <input type="text" placeholder="" name = "idnumber" bindblur = "setIdnumber" value=""/>
     </view>
-  <view class="border-css"></view>
+    <view>
+    <text>报考科目</text>
+    </view>
     <view>
       <picker bindchange="bindSubjectPickerChange" value="{{subject_index}}" range="{{subjects}}" name = "subject">
-        <view class="picker">
-          <text>报考科目</text> {{subjects[subject_index]}}
-        </view>
+        <view class="input_text"><text>{{subjects[subject_index]}}</text></view>
       </picker>
     </view>
-  <view class="border-css"></view>
+    <view>
+    <text>报考级别</text>
+    </view>
     <view>
       <picker bindchange="bindLevelPickerChange" value="{{level_index}}" range="{{levels}}" name = "level">
         <view class="picker">
-          <text>报考级别</text> {{levels[level_index]}} 级
+        <view class="input_text"><text>{{levels[level_index]}}级</text></view>
         </view>
       </picker>
     </view>
-  <view class="border-css"></view>
     <view>
-      <text>证书附件</text>
+      <text>证书附件(附件页含作品照片）</text>
+    </view>
+    <view>
       <radio-group name="fj">
           <label><radio value="1" checked="{{fj_do_checked}}"/>制作</label>
           <label><radio value="0" checked="{{fj_not_checked}}"/>不制作</label>
@@ -42,53 +50,60 @@
     </view>
   <view class="border-css"></view>
     <view>
-      <button bindtap="setDataAuto">自动填写（首次报考无效）</button>
+      <button type="primary" bindtap="setDataAuto">自动填写（首次报考无效）</button>
     </view>
   <view class="border-css"></view>
     <view>
       <text>性别</text>
+      </view>
+    <view>
       <radio-group name="sex">
           <label><radio value="0" checked="{{male_checked}}"/>男</label>
           <label><radio value="1" checked="{{female_checked}}"/>女</label>
         </radio-group>
     </view>
-  <view class="border-css"></view>
+
     <view>
-      <picker mode="date" value="{{dob}}" start="1930-09-01" end="2020-01-01" bindchange="bindDateChange">
-        <view class="picker">
-          <text>出生日期:</text> {{dob}}
-        </view>
+    <text>出生日期</text>
+    </view>
+    <view>
+      <picker name="date" mode="date" value="{{dob}}" start="1930-09-01" end="2020-01-01" bindchange="bindDateChange">
+        <view class="input_text"><text>{{dob}}</text></view>
       </picker>
     </view>
-  <view class="border-css"></view>
     <view>
       <text>国籍</text>
+      </view>
+    <view>
       <input type="text" placeholder="" name = "nationality" value = "{{nationality}}"/>
     </view>
-  <view class="border-css"></view>
     <view>
-      <picker bindchange="bindNationsPickerChange" value="{{nation_index}}" range="{{nations}}">
-        <view class="picker">
-          <text>民族</text> {{nations[nation_index]}}
-        </view>
+    <text>民族</text> 
+    </view>
+    <view>
+      <picker name="nation" bindchange="bindNationsPickerChange" value="{{nation_index}}" range="{{nations}}">
+        <view class="input_text"><text>{{nations[nation_index]}}</text></view>
       </picker>
     </view>
-  <view class="border-css"></view>
     <view>
       <text>地址</text>
+    </view>
+    <view>
       <input type="text" placeholder="" name = "address" value = "{{address}}"/>
     </view>
-  <view class="border-css"></view>
+    <view class="border-css"></view>
     <view>
-      <button bindtap="pickImage">上传电子照片</button>
-      <view>
-            <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="aspectFit" src="{{src}}" ></image>
+      <text>电子照片（需证件头像照）</text>
+    </view>
+    <view>
+      <view bindtap="pickImage" >
+            <image name="image" style="width: 400rpx; height: 400rpx; background-color: #eeeeee;" mode="aspectFit" src="{{src}}" ></image>
       </view>
     </view>
-  
+  <view class="border-css"></view>
     <view class="btn-area">
       <!-- <button formType="reset">上一步</button> -->
-      <button formType="submit">下一步</button>
+      <button type="primary" formType="submit">下一步</button>
     </view>
     </form>
 </view>

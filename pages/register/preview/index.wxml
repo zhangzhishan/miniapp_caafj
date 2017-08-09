@@ -1,113 +1,88 @@
 <view class="container">
-<form bindreset="formReset" bindsubmit="formSubmit">
+  <form bindreset="formReset" bindsubmit="formSubmit">
+    <view><text style="width:100%;font-size:13pt;font-weight: bold;text-align: center;">请仔细填写报名信息，确保无误</text></view>
+    <view class="border-css"></view>
     <view>
-    <text style="width:100%;font-weight: bold;text-align: center;">
-        请仔细填写报名信息，确保无误
-    </text>
+        <text>姓名</text>
+    </view>
+    <view class="input_text">
+        <text>{{name}}</text>
     </view>
     <view>
-        <text>
-            姓名
-        </text>
-        <text>
-            {{name}}
-        </text>
+        <text>拼音</text>
+    </view>
+    <view class="input_text">
+        <text>{{pinyin}}</text>
     </view>
     <view>
-        <text>
-            拼音
-        </text>
-        <text>
-            {{pinyin}}
-        </text>
+        <text>身份证</text>
+    </view>
+    <view class="input_text">
+        <text>{{idnumber}}</text>
     </view>
     <view>
-        <text>
-            身份证
-        </text>
-        <text>
-            {{idnumber}}
-        </text>
+        <text>报考科目</text>
+    </view>
+    <view class="input_text">
+        <text>{{subjects[subject_index]}}</text>
     </view>
     <view>
-        <text>
-            报考科目
-        </text>
-        <text>
-            {{subjects[subject_index]}}
-        </text>
+        <text>报考级别</text>
+    </view>
+    <view class="input_text">
+        <text>{{levels[level_index]}}级</text>
     </view>
     <view>
-        <text>
-            报考级别
-        </text>
-        <text>
-            {{levels[level_index]}}
-        </text>
+        <text>证书附件</text>
+    </view>
+    <view class="input_text">
+        <text>{{fj}}</text>
     </view>
     <view>
-        <text>
-            证书附件
-        </text>
-        {{fj}}
+        <text>性别</text>
     </view>
-
-    <view>
-        <text>
-            性别
-        </text>
-        {{sex}}
+    <view class="input_text">
+        <text>{{sex}}</text>
     </view>
     <view>
-        <text>
-            生日
-        </text>
-        <view>
-            {{dob}}
-        </view>
+        <text>生日</text>
+    </view>
+    <view class="input_text">
+         <text>{{dob}}</text>
     </view>
     <view>
-        <text>
-            国籍
-        </text>
-        <text>
-            {{nationality}}
-        </text>
+        <text>国籍</text>
+    </view>
+    <view class="input_text">
+        <text>{{nationality}}</text>
     </view>
     <view>
-        <text>
-            民族
-        </text>
-        <text>
-            {{nations[nation_index]}}
-        </text>
+        <text>民族</text>
+    </view>
+    <view class="input_text">
+        <text>{{nations[nation_index]}}</text>
     </view>
     <view>
-        <text>
-            地址
-        </text>
-        <text>
-            {{address}}
-        </text>
+        <text>地址</text>
+    </view>
+    <view class="input_text">
+        <text>{{address}}</text>
+    </view>
+    <view class="border-css"></view>
+    <view>
+        <text>电子照片</text>
     </view>
     <view>
-        <text style="width:120px;">
-            电子照片
-        </text>
-        
-        <view>
-                    <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="aspectFit" src="{{src}}" ></image>
-
-        </view>
+          <image style="width: 400rpx; height: 400rpx; background-color: #eeeeee;" mode="aspectFit" src="{{src}}" ></image>
     </view>
-    
-        <view class="btn-area">
-            <button formType="submit">
-                确认提交
-            </button>
-            <!-- <button formtype="reset"> -->
-                <!-- 下一步 -->
-            <!-- </button> -->
-        </view>
-    </form>
+    <view class="border-css"></view>
+    <view class="btn-area">
+        <button type="primary" formType="submit">
+            确认提交
+        </button>
+        <!-- <button formtype="reset"> -->
+            <!-- 下一步 -->
+        <!-- </button> -->
+    </view>
+  </form>
 </view>

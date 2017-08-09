@@ -83,5 +83,17 @@ Page({
                 console.info(res);
             }
         });
+    },
+    onShareAppMessage: function () {
+      return {
+        title: '福建美术考级中心成绩查询',
+        path: '/pages/score/index',
+        success: function (res) {
+          // 转发成功
+        },
+        fail: function (res) {
+          // 转发失败
+        }
+      }
     }
 })

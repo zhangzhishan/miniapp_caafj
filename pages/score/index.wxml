@@ -6,31 +6,23 @@
 <view class="container">
     <form bindreset="formReset" bindsubmit="formSubmit">
         <view>
-            <text>
-                姓名
-            </text>
+            <text>姓名</text>
+        </view>
+        <view>
             <input name = "name" type="text" placeholder="" />
         </view>
-<!--         <view class="td">生日</view>
-<picker mode="date" value="{{date}}" start="1990-09-01" end="{{date}}" bindchange="bindDateChange">
-    <view class="picker">
-      当前选择: {{date}}
-    </view>
-  </picker> -->
         <view>
-            <!-- <text> -->
-                <!-- 生日 -->
-            <!-- </text> -->
+          <text>出生日期</text>
+        </view>
+        <view>
             <picker name = "dob" bindchange="bindDateChange" end="2020-09-01" mode="date" start="1900-09-01" value="{{dob}}">
-                <view class="picker">
-       <text>出生日期</text> {{dob}}
-    </view>
+                <view class="input_text"><text>{{dob}}</text></view>
             </picker>
         </view>
         <view>
-            <text>
-                性别
-            </text>
+            <text>性别</text>
+        </view>
+        <view>
             <radio-group class="radio-group" bindchange="radioChange" name = "sex">
 
             <radio checked="true" value="0" />
@@ -41,18 +33,15 @@
             女
             </radio-group>
         </view>
-        <view class="line-css"></view>
+        <view class="border-css"></view>
         <view>
-          <text style="width:200px;">
-                或只输入身份证号
-          </text>
+          <text style="width:200px;">或只输入身份证号</text>
         </view>
         <view>
-            
-            <input placeholder="身份证输入键盘" type="text" name = "idnumber" style="height:40px;width:100%;margin-bottom:20px;"/>
+            <input placeholder="身份证输入键盘" type="text" name = "idnumber" style="margin-bottom:20px;"/>
         </view>
         <view class="btn-area">
-            <button formType="submit">
+            <button type="primary"  formType="submit">
                 查询成绩
             </button>
         </view>

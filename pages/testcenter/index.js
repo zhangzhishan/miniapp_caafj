@@ -55,5 +55,17 @@ Page({
         //         userInfo: userInfo
         //     })
         // })
+    },
+    onShareAppMessage: function () {
+      return {
+        title: '福建美术考级中心考点登录',
+        path: '/pages/tesetcenter/index',
+        success: function (res) {
+          // 转发成功
+        },
+        fail: function (res) {
+          // 转发失败
+        }
+      }
     }
 })

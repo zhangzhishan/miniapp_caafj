@@ -14,8 +14,8 @@
   </view>
 
   <view class="btn-area">
-    <button bindtap="backToIndex" style="margin-right:10px;">返回首页</button>
-    <button bindtap="continueRegister">继续报名</button>
+    <button type="primary" bindtap="backToIndex" style="margin-right:10px;">返回首页</button>
+    <button type="primary" bindtap="continueRegister">继续报名</button>
   </view>
 </form>
 </view>

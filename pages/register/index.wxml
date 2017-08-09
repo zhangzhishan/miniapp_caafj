@@ -3,24 +3,19 @@
 </import>
 <template is="head">
 </template>
-<view class="container">
+<view class="container" >
     <form bindreset="formReset" bindsubmit="formSubmit">
-        <view class="section">
-            <text class="user-name">
-                请输入编号：
-            </text>
+        <view>
+            <text class="user-name">请输入编号：</text>
             <input focous="true" name="kjjbm" placeholder="编号" type="number"/>
         </view>
         <view class="btn-area">
-            <button formType="submit">
+            <button type="primary" formType="submit">
                 开始报名
             </button>
         </view>
         <view class="userinfo">
-            <text>
-                编号请咨询考生所属考级点。\n
-                非承办点考生，请与就近考级点联系。
-            </text>
+            <text>编号请咨询考生所属考级点。\n<text></text>非承办点考生，请与就近考级点联系。</text>
         </view>
     </form>
 </view>

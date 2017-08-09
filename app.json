@@ -11,21 +11,34 @@
     "pages/description/index"
   ],
   "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#09bb07",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+
     "list": [
       {
         "pagePath": "pages/register/index",
+        "iconPath": "image/register-OFF.png",
+        "selectedIconPath": "image/register-ON.png",
         "text": "报名"
       },
       {
         "pagePath": "pages/score/index",
+        "iconPath": "image/score-OFF.png",
+        "selectedIconPath": "image/score-ON.png",
         "text": "成绩"
       },
       {
         "pagePath": "pages/description/index",
+        "iconPath": "image/description-OFF.png",
+        "selectedIconPath": "image/description-ON.png",
         "text": "介绍"
       },
       {
         "pagePath": "pages/testcenter/index",
+        "iconPath": "image/site-OFF.png",
+        "selectedIconPath": "image/site-ON.png",
         "text": "考点"
       }
     ]

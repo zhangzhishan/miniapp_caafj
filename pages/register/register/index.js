@@ -1,5 +1,7 @@
 // pages/register/register/index.js
 var app = getApp()
+var url = app.globalData.baseurl + 'register/check'
+
 // var util = require('../../utils/util.js')
 Page({
     /**
@@ -48,9 +50,58 @@ Page({
         // console.log(options.bm_bm)
     },
     formSubmit: function(e) {
-        var that = this
-        var info = e.detail.value
-        console.log(info)
+        var that = this;
+        var info = e.detail.value;
+        // console.log(info);
+        if (e.detail.value.name.length == 0) {
+          app.showError("请输入姓名！");
+          return;
+        }
+        if (e.detail.value.pinyin.length == 0) {
+          app.showError("请输入拼音！");
+          return;
+        }
+        if (e.detail.value.idnumber.length == 0) {
+          app.showError("请输入身份证！");
+          return;
+        }
+        if (e.detail.value.subject.length == 0) {
+          app.showError("请选择报考科目！");
+          return;
+        }
+        if (e.detail.value.level.length == 0) {
+          app.showError("请选择报考级别！");
+          return;
+        }
+        if (e.detail.value.fj.length == 0) {
+          app.showError("请选择证书附件！");
+          return;
+        }
+        if (e.detail.value.sex.length == 0) {
+          app.showError("请选择性别！");
+          return;
+        }
+        if (e.detail.value.date.length == 0) {
+          app.showError("请选择出生日期！");
+          return;
+        }
+        if (e.detail.value.nationality.length == 0) {
+          app.showError("请输入国籍！");
+          return;
+        }
+        if (e.detail.value.nation.length == 0) {
+          app.showError("请选择民族！");
+          return;
+        }
+        if (e.detail.value.address.length == 0) {
+          app.showError("请输入地址！");
+          return;
+        }
+        if (that.data.src.length == 0) {
+          app.showError("请上传电子照片！");
+          return;
+        }
+        
         that.setData({
             name: info.name,
             idnumber: info.idnumber,
@@ -60,11 +111,40 @@ Page({
             sex: info.sex,
             nationality: info.nationality,
             address: info.address,
-        })
-        wx.setStorageSync('data', that.data)
-        wx.navigateTo({
-            url: '../preview/index',
-        })
+        });
+        console.log(info)
+        wx.setStorageSync('data', that.data);
+        wx.request({
+            url: url,
+            method: "POST",
+            data: {
+                bm_sex: info.sex, // 0 男 1 女
+                bm_csdate: info.date,
+                bm_mail: info.nationality, //国籍
+                bm_zy: that.data.subjects[info.subject],
+                bm_level: that.data.levels[info.level],
+                IDnumber: info.idnumber, // 身份证号码
+            },
+            success: function(res) {
+                // console.log(res)
+                if (res.statusCode == 200) {
+                    if (res.data.code == 400) {
+                            // console.log(res.data)
+                        app.showError(res.data.error)
+                    }
+                    else {
+                        wx.navigateTo({
+                            url: '../preview/index',
+                        })
+                    }
+                }
+
+
+            },
+            complete: function() {
+                // console.log(info.levels[info.level_index])
+            }
+        });
     },
     // bindPickerChange: function(e) {
     //     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -207,10 +287,7 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function() {},
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function() {},
+    
 })
 
 function upload(page, path) {

@@ -5,12 +5,13 @@
 .bc-gray{
   background: #E6F3F9;
 }
-page {
-  font-size: 14px;
-  color: #333
+view{
+  font-size: 11pt;
+  font-weight: bold;
+  color: #353535;
 }
 .table {
-  border:1px solid #dadada;
+  border:2rpx solid #dadada;
   border-right: 0;
   border-bottom: 0;
   width: 98%;
@@ -18,12 +19,13 @@ page {
 .tr {
   width: 100%;
   display: flex;
+  min-height: 72rpx;
   justify-content: space-between;
 }
 .th,.td {
-  padding: 10px;
-  border-bottom: 1px solid #dadada;
-  border-right: 1px solid #dadada;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #dadada;
+  border-right: 2rpx solid #dadada;
   text-align: center;
   width:100%
 }
@@ -41,10 +43,11 @@ page {
 }
 .btn-area button{
   /*color: #fff;*/
-  font-size: 25px;
+  font-size: 50rpx;
   font-weight: bold;
+  width: 250rpx;
   /*background-color: #3399ff;*/
 }
 form{
-  font-size: 14px;
+  font-size: 28rpx;
 }

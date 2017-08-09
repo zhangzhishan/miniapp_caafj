@@ -1,3 +1,7 @@
+<view class="ilogo">
+    <view><image mode="aspectFit" src="../../../image/u437.png" style="width:100rpx;height:80rpx;"></image></view>
+    <view><image mode="aspectFit" src="../../../image/u435.png" style="width:400rpx;height:80rpx;"></image></view>
+  </view>
 <view class="swiper-tab">
  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">考核中</view>
  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">合格成绩</view>
@@ -7,32 +11,29 @@
  <swiper-item>
   <!-- <view></view> -->
   <view wx:for="{{exam_ing}}">
-  {{item.bm_name}} {{item.bm_zy}} {{item.bm_level}} {{item.bm_time}}
-</view>
+    <view class="list-item"><text>{{item.bm_name}}</text><text>{{item.bm_zy}}</text><text>{{item.bm_level}}级</text><text>{{item.bm_time}}</text></view>
+    <view class="border-css"></view>
+  </view>
  </swiper-item>
 
  <swiper-item>
-  <!-- <view></view> -->
-    <view wx:for="{{exam_done}}" bindtap="hideOrDisplay" data-id="{{item.serial}}">
-  	{{item.bm_name}} {{item.bm_zy}} {{item.pass_level}} {{item.bm_time}}
-
-      <view wx:if="{{showid == item.serial}}" class="detail">
-        <view class="row">
-          <text>报考级别</text>
-          <input type="text"  value="{{item.bm_level}}" disabled="true"/>
+    <view wx:for="{{exam_done}}" bindtap="hideOrDisplay" data-id="{{item.serial}}" >
+      <view class="list-item"><text>{{item.bm_name}}</text><text>{{item.bm_zy}}</text><text>{{item.pass_level}}级</text><text>{{item.bm_time}}</text></view>
+        <view wx:if="{{showid == item.serial}}" class="detail">
+          <view class="row">
+            <text>报考级别</text>
+            <input type="text"  value="{{item.bm_level}}" disabled="true"/>
+          </view>
+          <view class="row">
+            <text>合格成绩</text>
+            <input type="text"  value="{{item.pass_level}}" disabled="true"/>
+          </view>
+          <view class="row">
+            <text>证书号</text>
+            <input type="text"  value="{{item.serial}}" disabled="true"/>
+          </view>
         </view>
-        <view class="row">
-          <text>合格成绩</text>
-          <input type="text"  value="{{item.pass_level}}" disabled="true"/>
-        </view>
-        <view class="row">
-          <text>证书号</text>
-          <input type="text"  value="{{item.serial}}" disabled="true"/>
-        </view>
+        <view class="border-css"></view>
       </view>
-    </view>
-
-  <!-- <view data-text="{{item.text}}" class="static_cell" bindtap="{{item.func}}">{{item.text}}</view> -->
-
  </swiper-item>
 </swiper>

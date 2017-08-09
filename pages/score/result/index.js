@@ -18,7 +18,7 @@ Page({
         console.log(e);
       var tipsshow_val = e.currentTarget.dataset.id;
       if(tipsshow_val == this.data.showid) {
-this.setData({
+        this.setData({
           // tipsshow: 'undis',
           showid: 0,
         })

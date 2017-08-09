@@ -6,13 +6,14 @@
   line-height: 80rpx;
 }
 .swiper-tab-list{
-  font-size: 30rpx; 
+  font-size: 14pt; 
+  font-weight: 600;
   display: inline-block; 
-  width: 20%; 
+  width: 40%; 
   color: #777777; 
 }
 .on{
-  color: #da7c0c; 
+  color: #09bb07; 
   border-bottom: 5rpx solid #da7c0c;
 }
 .swiper-box{ 
@@ -25,19 +26,23 @@
   text-align: center; 
 }
 .line-css{
-  height: 1px;
+  height: 2rpx;
   background: #777;
-  margin: 10px 0 10px 0;
+  margin: 20rpx 0 20rpx 0;
 }
 
 .detail{
+  font-size: 11pt;
+  font-weight: 600;
+  font-stretch: ultra-expanded;
+  color: #353535;
   display: flex;  
   flex-direction: column;
   width: 100%;
   height: 100%;
   flex:1;
-  justify-content: center;
-  margin: 15px 10px 0px 10px;
+  justify-content: left;
+  margin: 30rpx 20rpx 0px 20rpx;
 }
 .row{
   display: flex;  
@@ -45,22 +50,59 @@
   width: 100%;
   height: 100%;
   flex:1;
-  justify-content: center;
-  margin:0px 10px 0px 10px;
+  justify-content: left;
+  margin:0px 20rpx 0px 40rpx;
 }
-.detail text{
-  width: 100px;
+.row text{
+  width: 200rpx;
   text-align: left;
-  margin:0px 0 10px 0;
+  margin:0px 0 20rpx 0;
 }
-.detail input{
-  border: 1px solid #666;
-  background-color: #aaa;
-  font-size: 14px;
+.row input{
+  border: 2rpx solid #888888;
+  background-color: #f6f6f6;
+  width: 60%;
+  height: 72rpx;
+  line-height: 72rpx;
+  text-align: left;
 }
 .undis{
   display: none;
 }
 .dis{
   display: block;
+}
+.ilogo{
+  display: flex; 
+  flex-wrap: nowrap; 
+  flex-direction:row;
+  width: 100%;
+  min-height: 72px;
+  justify-content: center;
+  align-items: center;
+}
+.list-item{
+  font-size: 11pt;
+  font-weight: 600;
+  font-stretch: ultra-expanded;
+  color: #353535;
+  display: flex;  
+  flex-direction: row;
+  width: 100%;
+  min-height: 72rpx;
+  justify-content: left;
+  align-items: center;
+}
+
+.list-item text{
+  width: 100%;
+  height: 72rpx;
+  line-height: 72rpx;
+  text-align: center;
+}
+.border-css{
+  height: 2rpx;
+  min-height: 2rpx;
+  background: #ccc;
+  margin: 20rpx 0 20rpx 0;
 }

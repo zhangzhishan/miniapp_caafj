@@ -38,8 +38,8 @@ App({
   },
   globalData:{
     userInfo: null,
-    // baseurl: 'http://localhost/api/',
+    baseurl: 'http://localhost:8000/api/',
     id_srcurl: 'https://caafj.com/images/full_size/',
-    baseurl: 'https://caafj.com/api/',
+    // baseurl: 'https://caafj.com/api/',
   }
 })
