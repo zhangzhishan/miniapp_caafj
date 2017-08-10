@@ -1,8 +1,5 @@
-<!--index.wxml-->
-<import src="../templates/head.wxml">
-</import>
-<template is="head">
-</template>
+<import src="../templates/head.wxml"></import>
+<template is="head"></template>
 <view class="container" >
     <form bindreset="formReset" bindsubmit="formSubmit">
         <view>

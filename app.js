@@ -12,12 +12,14 @@ App({
   content: message,
   showCancel: false,
 })
-//     wx.showToast({
-//   title: message,
-//   icon: 'loading',
-//   duration: 2000
-// })
   },
+    showWarning: function (message) {
+      wx.showModal({
+        title: '提示',
+        content: message,
+        showCancel: false,
+      })
+    },
   getUserInfo:function(cb){
     var that = this
     if(this.globalData.userInfo){
@@ -38,8 +40,8 @@ App({
   },
   globalData:{
     userInfo: null,
-    baseurl: 'http://localhost:8000/api/',
+    //baseurl: 'http://localhost:8000/api/',
     id_srcurl: 'https://caafj.com/images/full_size/',
-    // baseurl: 'https://caafj.com/api/',
+    baseurl: 'https://caafj.com/api/',
   }
 })

@@ -132,6 +132,19 @@ Page({
                             // console.log(res.data)
                         app.showError(res.data.error)
                     }
+                    else if(res.data.code == 'ZZS') {
+                      wx.showModal({
+                        title: '提示',
+                        content: res.data.warning,
+                        success: function (res) {
+                          if (res.confirm) {
+                            wx.navigateTo({
+                              url: '../preview/index',
+                            })
+                          }
+                        }
+                      })
+                    }
                     else {
                         wx.navigateTo({
                             url: '../preview/index',

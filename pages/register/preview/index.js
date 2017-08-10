@@ -1,5 +1,6 @@
 // pages/register/register/index.js
 var app = getApp()
+var getDataFlag = false;
 var url = app.globalData.baseurl + 'register/create'
 Page({
     /**
@@ -35,8 +36,8 @@ Page({
             idnumber: info.idnumber,
             dob: info.dob,
             pinyin: info.pinyin,
-            fj: info.fj,
-            sex: info.sex,
+            fj: info.fj=='0' ? "不制作" : '制作',
+            sex: info.sex=='0'?'男':'女',
             nationality: info.nationality,
             address: info.address,
             bm_bm: info.bm_bm,
@@ -51,13 +52,11 @@ Page({
     },
     formSubmit: function() {
         // var that = this
+      if (getDataFlag) {
+        return;
+      }
         var info = wx.getStorageSync('data')
-        // console.log(that)
-        // console.log(that.levels)
-        // console.log(that.levels[that.level_index])
-        // console.log(info.levels[info.level_index])
-        // console.log(info)
-        // return;
+        getDataFlag = true;
         wx.request({
             url: url,
             method: "POST",
@@ -76,13 +75,14 @@ Page({
                 IDnumber: info.idnumber, // 身份证号码
             },
             success: function(res) {
+              getDataFlag = false;
                 // console.log(res)
-
-                wx.navigateTo({
-                    url: '../submited/index?exam_number=' + res.data.data,
-                })
+              wx.navigateTo({
+                url: '../submited/index?exam_number=' + res.data.data,
+              })
             },
             complete: function() {
+              getDataFlag = false;
                 // console.log(info.levels[info.level_index])
             }
         });

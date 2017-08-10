@@ -11,7 +11,7 @@
     "pages/description/index"
   ],
   "tabBar": {
-    "color": "#dddddd",
+    "color": "#353535",
     "selectedColor": "#09bb07",
     "borderStyle": "white",
     "backgroundColor": "#ffffff",

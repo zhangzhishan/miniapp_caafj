@@ -1,5 +1,5 @@
 <template name="head">
   <view class="logo">
-    <image mode="aspectFit" src="../../image/logo1.png"></image>
+    <image mode="widthFix" src="../../image/logo1.png"></image>
   </view>
 </template>
